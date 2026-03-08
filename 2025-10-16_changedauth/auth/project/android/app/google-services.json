@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1083358427177",
+    "project_id": "auth-dd98b",
+    "storage_bucket": "auth-dd98b.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1083358427177:android:4ec4e77fbfcc3567c08438",
+        "android_client_info": {
+          "package_name": "com.example.project"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAwb25EW_npCN0A_mRa0k7fk-a09J_vV_s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
