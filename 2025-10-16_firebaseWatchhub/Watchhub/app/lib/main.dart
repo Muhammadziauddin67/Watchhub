@@ -1,0 +1,60 @@
+// import 'package:flutter/material.dart';
+// import 'package:app/screens/screen1.dart';
+
+// class MyApp extends StatelessWidget {
+//   const MyApp({super.key});
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//       home: Screen1(),
+//     );
+//   }
+// }
+
+// void main(){
+//   runApp(
+//     MyApp(
+//     )
+//   );
+// }
+import 'package:app/firebase_options.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:flutter/material.dart';
+import 'screens/main-screens/customersupport-feedback.dart';
+import 'screens/main-screens/order-history.dart';
+import 'screens/main-screens/wishlist.dart';
+
+Future<void> main() async {
+ await Firebase.initializeApp(
+   options: DefaultFirebaseOptions.currentPlatform,
+ );
+  runApp(const WatchHubApp());
+}
+
+
+
+class WatchHubApp extends StatelessWidget {
+  const WatchHubApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'WatchHub',
+      theme: ThemeData(
+        scaffoldBackgroundColor: const Color(0xFF1A1A1A),
+        fontFamily: 'Poppins',
+        primaryColor: const Color(0xFFD4AF37), // Gold tone
+      ),
+      home: const WishlistScreen(),
+      routes: {
+        '/support': (_) => const CustomerSupportScreen(),
+        '/orders': (_) => const OrderHistoryScreen(),
+        '/wishlist': (_) => const WishlistScreen(),
+      },
+    );
+  }
+}
